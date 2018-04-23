@@ -4,7 +4,7 @@ def game_hash
       team_name: "Brooklyn Nets",
       colors: ["Black", "White"],
       :players => 
-        [ 
+        [
           {
           player_name: "Alan Anderson",
           number: 0,
@@ -175,9 +175,9 @@ end
 def player_stats(name) 
   game_hash.each do |location, team_data|
    team_data[:players].each do |player|
-        if player[:player_name] == name
-          player.shift
-          return player
+      if player[:player_name] == name
+        player.shift
+        return player
       end
     end
   end
@@ -259,7 +259,9 @@ def long_name_steals_a_ton?
     end
   end
   if player_name == player_with_longest_name
-   return true
+    return true
+  else 
+    return false
  end
 end
 
